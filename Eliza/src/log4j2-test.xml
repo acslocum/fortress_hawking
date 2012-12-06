@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+  <appenders>
+	<File name="File" fileName="eliza.log">
+	  <PatternLayout pattern="%d{HH:mm:ss} %m%n"/>
+	</File>
+  </appenders>
+  <loggers>
+    <root level="info">
+      <appender-ref ref="File"/>
+    </root>
+  </loggers>
+</configuration>

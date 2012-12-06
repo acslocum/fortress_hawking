@@ -6,6 +6,8 @@ import java.io.*;
 import java.awt.*;
 import java.net.*;
 import java.util.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  *  Eliza main class.
@@ -13,7 +15,7 @@ import java.util.*;
  *  Does the input transformations.
  */
  public class ElizaMain {
-
+	private static Logger logger = LogManager.getLogger("Eliza");
 
     final boolean echoInput = false;
     final boolean printData = false;
@@ -403,6 +405,8 @@ import java.util.*;
 	        s = in.readLine();
 	        if (s == null) break;
 			resetLastInputTime();
+			logger.info("SH " + reply);
+			logger.info("FG " + s);
 	    }
 		return 0;
 	}
