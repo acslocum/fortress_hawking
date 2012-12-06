@@ -5,6 +5,7 @@ import java.lang.*;
 import java.io.*;
 import java.awt.*;
 import java.net.*;
+import java.util.*;
 
 /**
  *  Eliza main class.
@@ -50,6 +51,14 @@ import java.net.*;
     static final int success = 0;
     static final int failure = 1;
     static final int gotoRule = 2;
+
+	ArrayList<String> pickupLines = new ArrayList<String>();
+	long lastInputTime;
+
+	public ElizaMain() throws Exception {
+		parsePickupLines();
+		resetLastInputTime();
+	}
 
     public boolean finished() {
         return finished;
@@ -183,8 +192,31 @@ import java.net.*;
             if (reply != null) return reply;
         }
         //  No xnone, just say anything.
-        return "I am at a loss for words.";
+        return randomPickupLine();
     }
+
+	public void parsePickupLines() throws Exception {
+		InputStream fis;
+		BufferedReader br;
+		String line;
+		fis = new FileInputStream("../pickup_lines.txt");
+		br = new BufferedReader(new InputStreamReader(fis));
+		while ((line = br.readLine()) != null) {
+			pickupLines.add(line);
+		}
+	}
+
+	public String randomPickupLine() {
+		return pickupLines.get((int)(pickupLines.size()*Math.random()));
+	}
+	
+	public long lastInput() {
+		return lastInputTime;
+	}
+	
+	public void resetLastInputTime() {
+		lastInputTime = new Date().getTime();
+	}
 
     /**
      *  Process a sentence.
@@ -370,6 +402,7 @@ import java.net.*;
 	        if (finished) break;
 	        s = in.readLine();
 	        if (s == null) break;
+			resetLastInputTime();
 	    }
 		return 0;
 	}
