@@ -1,5 +1,5 @@
-initial: How do you do.  Please tell me your problem.
-final: Goodbye.  It was nice talking to you.
+initial: I'm Stephen Hawking. Tell me about your love life.
+final: Goodbye.  I hope I see you later. In your bed.
 quit: bye
 quit: goodbye
 quit: done
@@ -40,15 +40,7 @@ synon: happy elated glad better
 synon: cannot can't
 synon: everyone everybody nobody noone
 synon: be am is are was
-key: xnone 0
-  decomp: *
-    reasmb: I'm not sure I understand you fully.
-    reasmb: Please go on.
-    reasmb: What does that suggest to you ?
-    reasmb: Do you feel strongly about discussing such things ?
-	reasmb: That is interesting.  Please continue.
-	reasmb: Tell me more about that.
-	reasmb: Does talking about this bother you ?
+synon: sexy horny hot randy sensual aroused racy arouse lustful libidinous lascivious titillating amorous erotic
 key: sorry 0
   decomp: *
     reasmb: Please don't apologise.
@@ -147,8 +139,8 @@ key: xforeign 0
     reasmb: I speak only English.
 key: hello 0
   decomp: *
-    reasmb: How do you do.  Please state your problem.
-    reasmb: Hi.  What seems to be your problem ?
+    reasmb: I am Stephen Hawking, Baby. I swing.
+    reasmb: I am Stephen Hawking, Love Guru. I can go for hours...
 key: computer 50
   decomp: *
     reasmb: Do computers worry you ?
@@ -227,6 +219,16 @@ key: i 0
     reasmb: Do you think coming here will help you not to be (3) ?
     reasmb: I'm sure it's not pleasant to be (3).
     reasmb: Can you explain what made you (3) ?
+  decomp: * i am* @sexy *
+    reasmb: I am pleased that you are (3). How can I make you more (3)?
+    reasmb: I would like to help you become more (3).
+    reasmb: I, too am very (3).
+    reasmb: What can I do to make you more (3) ?
+    reasmb: Let's go back to my place and take advantage of the fact that you're (3).
+    reasmb: I happen to know some very good tricks to make you more (3).
+    reasmb: (3), baby, you are so much more than just (3). 
+    reasmb: I have one in my wallet. Baby. Can you help me put it on?
+    reasmb: 
   decomp: * i am* @happy *
     reasmb: How have I helped you to be (3) ?
     reasmb: Has your treatment made you (3) ?
@@ -273,15 +275,20 @@ key: i 0
     reasmb: Do you say (1) for some special reason ?
     reasmb: That's quite interesting.
 key: you 0
+  decomp: * you are* @sexy *
+    reasmb: Damn right I am. I am very good at pleasuring others.  
+    reasmb: Women the world over, come to ride the Hawking machine.
+    reasmb: So, so (2). Your imagination is not adequate to understand my (2).    
   decomp: * you remind me of *
     reasmb: goto alike
   decomp: * you are *
     reasmb: What makes you think I am (2) ?
     reasmb: Does it please you to believe I am (2) ?
     reasmb: Do you sometimes wish you were (2) ?
-    reasmb: Perhaps you would like to be (2).
+    reasmb: Perhaps you would like to be (2)
   decomp: * you* me *
-    reasmb: Why do you think I (2) you ?
+    reasmb: I do think very highly of you. If you know what I'm saying you ?
+    reasmb: I would like very much to (2) you.
     reasmb: You like to think I (2) you -- don't you ?
     reasmb: What makes you think I (2) you ?
     reasmb: Really, I (2) you ?
