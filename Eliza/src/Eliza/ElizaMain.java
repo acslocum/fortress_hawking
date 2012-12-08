@@ -58,6 +58,7 @@ import org.apache.logging.log4j.Logger;
 	long lastInputTime;
 
 	public ElizaMain() throws Exception {
+		finished = false;
 		parsePickupLines();
 		resetLastInputTime();
 	}
@@ -390,6 +391,7 @@ import org.apache.logging.log4j.Logger;
     }
 
 	public int runProgramOnStream(InputStream stream) throws IOException{
+		finished = false;
 	    DataInputStream in = new DataInputStream(stream);
 	    String s;
 	    s = "Hello.";
@@ -397,16 +399,16 @@ import org.apache.logging.log4j.Logger;
 	    while (true) {
 			//System.out.println(">> " + s);
 	        String reply = processInput(s);
-	        System.out.println(reply);
 	        System.err.println(reply);
+	        System.out.println(reply);
 	        System.err.print(">");
 			System.out.flush();
 	        if (finished) break;
 	        s = in.readLine();
 	        if (s == null) break;
 			resetLastInputTime();
-			logger.info("SH " + reply);
-			logger.info("FG " + s);
+			logger.info("stephen: " + reply);
+			logger.info("guest:   " + s);
 	    }
 		return 0;
 	}

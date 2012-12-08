@@ -18,7 +18,12 @@ public class Eliza extends Applet {
 
     public void init() {
         showStatus("Loading Eliza");
-        eliza = new ElizaMain();
+        try {
+			eliza = new ElizaMain();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
     public void start() {

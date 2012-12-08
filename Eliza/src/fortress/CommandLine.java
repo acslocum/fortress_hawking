@@ -1,15 +1,14 @@
 package fortress;
 
 import Eliza.*;
-import java.io.*;
 import java.util.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class CommandLine extends TimerTask{
 	private static Logger logger = LogManager.getLogger("Eliza");
-	public static long DELAY = 2 * 60 * 1000;
-	public static long PERIOD = 2 * 60 * 1000;
+	public static long DELAY = 1 * 60 * 1000;
+	public static long PERIOD = 1 * 60 * 1000;
 	ElizaMain eliza;
 	long previousRandomPickupLine;
 	
@@ -27,7 +26,8 @@ public class CommandLine extends TimerTask{
 		if(eliza.lastInput() < previousRandomPickupLine) {
 			String pickup = eliza.randomPickupLine();
 			System.out.println(pickup);
-			logger.info("PL " + pickup);
+			System.err.println(pickup);
+			logger.info("stephen: " + pickup);
 		}
 		previousRandomPickupLine = new Date().getTime();
 	}

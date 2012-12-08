@@ -41,6 +41,7 @@ synon: cannot can't
 synon: everyone everybody nobody noone
 synon: be am is are was
 synon: sexy horny hot randy sensual aroused racy arouse lustful libidinous lascivious titillating amorous erotic
+synon: time late early tonight tomorrow
 key: sorry 0
   decomp: *
     reasmb: Please don't apologise.
@@ -139,8 +140,8 @@ key: xforeign 0
     reasmb: I speak only English.
 key: hello 0
   decomp: *
-    reasmb: I am Stephen Hawking, Baby. I swing.
-    reasmb: I am Stephen Hawking, Love Guru. I can go for hours...
+    reasmb: I am Stephen Hawking. I swing. What do you like to do in bed?
+    reasmb: I am Stephen Hawking, Love Guru. Tell me about your love life.
 key: computer 50
   decomp: *
     reasmb: Do computers worry you ?
@@ -228,7 +229,6 @@ key: i 0
     reasmb: I happen to know some very good tricks to make you more (3).
     reasmb: (3), baby, you are so much more than just (3). 
     reasmb: I have one in my wallet. Baby. Can you help me put it on?
-    reasmb: 
   decomp: * i am* @happy *
     reasmb: How have I helped you to be (3) ?
     reasmb: Has your treatment made you (3) ?
@@ -276,7 +276,7 @@ key: i 0
     reasmb: That's quite interesting.
 key: you 0
   decomp: * you are* @sexy *
-    reasmb: Damn right I am. I am very good at pleasuring others.  
+    reasmb: I am very good at pleasuring others.  
     reasmb: Women the world over, come to ride the Hawking machine.
     reasmb: So, so (2). Your imagination is not adequate to understand my (2).    
   decomp: * you remind me of *
@@ -439,3 +439,20 @@ key: different 0
 	reasmb: What do you suppose that disparity means ?
 	reasmb: Could there be some connection, do you suppose ?
 	reasmb: How ?
+key: time
+  decomp: * @time *
+    reasmb: Time stopped when you walked in the door.
+    reasmb: Time is meaningless. Can we get back to talking about sex?
+    reasmb: I can go all night. Can you handle that?
+key: late
+  decomp: *
+    reasmb: goto time
+key: tonight
+  decomp: *
+    reasmb: goto time
+key: night
+  decomp: *
+    reasmb: goto time
+key: sleep
+  decomp: *
+    reasmb: We can sleep after I ravage you. Where should I start?
